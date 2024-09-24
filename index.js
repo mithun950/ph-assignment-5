@@ -3,7 +3,7 @@ function getInputValueById(id) {
   if (isNaN(inputValue) || inputValue === "" || inputValue <= 0) {
     alert("Invalid Donation Amount");
   } else {
-    // myModal.showModal()
+    document.getElementById('my_modal_4').showModal();
   }
 
   return inputValue;
@@ -13,7 +13,81 @@ function getPreviousAmount(id) {
   return parseFloat(document.getElementById(id).innerText);
     
 }
+// function for history noakhali start
+function historyDonationNoakhali(id){
+ const donationTaka = getInputValueById(id);
+ const historyContainer = document.getElementById('history-section');
+
+ if(donationTaka){
   
+   // history item create 
+   const realTime = new Date().toLocaleString('en-GB',{timeZoneName: 'short'});
+   document.getElementById('history-section');
+
+   // new div create
+   const historyItem = document.createElement('div');
+   historyItem.className= 'p-5 border-2 rounded-md shadow-md mt-3'
+   historyItem.innerHTML = `
+   <p class='font-bold mb-5'>${donationTaka} Taka is donated for fsmine-2024 at Noakhali,Bangladesh</p>
+   <p class='text-gray-400'>Date:${realTime}</p>
+
+   `;
+   
+   historyContainer.appendChild(historyItem);
+ }
+} 
+// function for history noakhali end
+
+// function for history feni start
+function historyDonationFeni(id){
+  const donationTaka = getInputValueById(id);
+  const historyContainer = document.getElementById('history-section');
+ 
+  if(donationTaka){
+   
+    // history item create 
+    const realTime = new Date().toLocaleString('en-GB',{timeZoneName: 'short'});
+    document.getElementById('history-section');
+ 
+    // new div create
+    const historyItem = document.createElement('div');
+    historyItem.className= 'p-5 border-2 rounded-md shadow-md mt-3'
+    historyItem.innerHTML = `
+    <p class='font-bold mb-5'>${donationTaka} Taka is donated for flood relief at feni,Bangladesh</p>
+    <p class='text-gray-400'>Date:${realTime}</p>
+ 
+    `;
+    
+    historyContainer.appendChild(historyItem);
+  }
+ } 
+ // function for history feni end
+  
+ // function for history quota start
+ function historyDonationQuota(id){
+  const donationTaka = getInputValueById(id);
+  const historyContainer = document.getElementById('history-section');
+ 
+  if(donationTaka){
+   
+    // history item create 
+    const realTime = new Date().toLocaleString('en-GB',{timeZoneName: 'short'});
+    document.getElementById('history-section');
+ 
+    // new div create
+    const historyItem = document.createElement('div');
+    historyItem.className= 'p-5 border-2 rounded-md shadow-md mt-3'
+    historyItem.innerHTML = `
+    <p class='font-bold mb-3'>${donationTaka} Taka is donated for Aid injurid in teh quota movement, Bangladesh</p>
+    <p class='text-gray-400'>Date:${realTime}</p>
+ 
+    `;
+    
+    historyContainer.appendChild(historyItem);
+  }
+ } 
+// function for history quota end
+
 //noakhali donate
     const noakhaliDonateButton = document.getElementById("noakhali-donate-button");
     noakhaliDonateButton.addEventListener("click", function () {
@@ -29,6 +103,9 @@ function getPreviousAmount(id) {
     const yourAmountValue = getPreviousAmount('your-amount')
     const newTotalBalance = yourAmountValue - parseFloat(noakhaliInputValue);
     document.getElementById('your-amount').innerText = newTotalBalance;
+
+
+
 });
 
 // // feni donate
@@ -93,6 +170,8 @@ const blogBtn = document.getElementById('blog')
 });
  };
 
+//  document.getElementById('my_modal_4').showModal();
+
   // history button and donate button toggle
     
   const historyTab = document.getElementById("history-tab");
@@ -127,13 +206,15 @@ const blogBtn = document.getElementById('blog')
 });
 
 
-// history item create div
-
+// // history item create div
+// document.getElementById('history-section').classList.add('hidden');
 // const historyItem = document.createElement('div');
 // historyItem.innerHTML = `
-// <p></p>
-
+// <p class='font-bold mb-5'>${inputValue} Taka is donated from flood relief at Noakhali,Bangladesh</p>
+// <p class='text-gray-400 '>Date:${new Date().toLocalString('en-US',{timeZone:'Asia/Dhaka',timeStyle: 'medium',dateStyle:'full'})};</p>
 
 // `;
+// const historyContainer = document.getElementById('history-section');
+// historyContainer.insertBefore(historyItem,historyContainer.firstChild);
 
 
