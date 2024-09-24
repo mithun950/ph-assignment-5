@@ -14,9 +14,10 @@
         <!-- nav start -->
         <nav class=" bg-[#F9F7F3] py-4">
             <div class="flex justify-around gap-5 items-center mt-3 mb-4 w-full mx-auto">
-         <div class="">
-            <button id="home-btn" class="btn bg-[#B4F461] px-8 font-bold">Home</button>
-         </div>  
+         <!-- home-btn -->
+          <div>
+            <button id="home" class="btn bg-[#B4F461] px-8 font-bold">Home</button>
+          </div>
          <div class=" max-sm: hidden sm:flex items-center gap-1 ">
            <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/logo.png" alt="">
            <p class="text-xl font-semibold">Donate Bangladesh</p> 
@@ -44,33 +45,37 @@
 
      
     <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border mt-2">
-        <div class="collapse-title text-xl font-medium">Focus me to see content</div>
+        <div class="collapse-title text-xl font-medium">What is the Document Object Model?</div>
         <div class="collapse-content">
-          <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          <p>The DOM (Document Object Model) is a programming interface that represents the structure of an HTML or XML document as a tree of objects. It allows programs like JavaScript to manipulate, access, and update the content, structure, and style of a web page dynamically. Each element, attribute, and text within the HTML is represented as a node in this tree, making it possible to interact with the page programmatically.</p>
         </div>
       </div>
 
       <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border mt-2">
-        <div class="collapse-title text-xl font-medium">Focus me to see content</div>
+        <div class="collapse-title text-xl font-medium">How do you select an element from the (DOM)?</div>
         <div class="collapse-content">
-          <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          <p>
+            To select an element from the DOM, you can use several JavaScript methods, depending on how you want to target the element (by id, class, tag name, or other selectors)</p>
         </div>
       </div>
 
       <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border mt-2">
-        <div class="collapse-title text-xl font-medium">Focus me to see content</div>
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM and why is it usefull?</div>
         <div class="collapse-content">
-          <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          <p>
+            Event delegation is a technique in JavaScript where a single event listener is added to a parent element to manage events for all its child elements, rather than adding separate event listeners to each child element. This works because of event bubbling, where events triggered on child elements bubble up through their parent elements</p>
         </div>
       </div>
 
       <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border mt-2">
-        <div class="collapse-title text-xl font-medium">Focus me to see content</div>
+        <div class="collapse-title text-xl font-medium">How do you multiple an elements attributes and style using the DOM?</div>
         <div class="collapse-content">
-          <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          <p>To manipulate an element's attributes and style using the DOM, you can use JavaScript to directly access and modify the attributes and CSS properties of the element.</p>
         </div>
       </div>
     </section>
      <!-- faq end -->
+
+     <script src="index.js"></script>
 </body>
 </html>

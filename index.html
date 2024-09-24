@@ -9,13 +9,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
 </head>
-<body class="">
-    <header class="sticky top-0 z-10">
+<body>
+    <header class="sticky top-0 z-10 backdrop-blur-lg pb-3">
     <!--navbar start  -->
     <nav class=" bg-[#F9F7F3] py-4">
         <div class="flex justify-around gap-5 items-center mt-3 mb-4 w-full mx-auto">
      <div>
-        <button id="blog-btn" class="btn bg-[#B4F461] px-8 font-bold">Blog</button>
+        <button id="blog" class="btn bg-[#B4F461] px-8 font-bold">Blog</button>
      </div>  
      <div class=" max-sm: hidden sm:flex items-center gap-1 ">
        <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/logo.png" alt="">
@@ -31,12 +31,13 @@
 
     <!-- button area start -->
      <div class='text-center mt-6 gap-3'>
-     <button id="donation-tab" class="btn px-7 bg-[#B4F461] font-bold ">Donation</button>
-     <button id="history-tab" class=" btn px-8">History</button>
+     <button id="donation-tab" class="btn px-7 bg-[#B4F461] mr-2  font-bold ">Donation</button>
+     <button id="history-tab" class=" btn px-8 font-bold ml-2">History</button>
     </div>
      <!--button area end  -->
     </header>
-
+      
+       
      <!-- noakhali flood donate card start  -->
      <div id="noakhali-donate-card" class="hero  border-2 rounded-md w-10/12 mx-auto mt-10">
         <div class="hero-content flex-col lg:flex-row justify-between">
@@ -120,14 +121,37 @@
       </div>   
      
       <!-- qouta movement end -->
-
-      <!-- history list -->
-       <div id="history-list" class="hidden">
+      
+      <!-- history section-->
+       <section  id="history-section" class="w-10/12 mx-auto hidden ">
+       <div class="border-2 rounded-lg p-5 mt-5">
         <h1>mithun</h1>
 
        </div>
+      </section>
+<!-- history section end  -->
 
-
+<!-- modal start -->
+ 
+<!-- You can open the modal using ID.showModal() method -->
+<button class="btn hidden" onclick="myModal.showModal()">open modal</button>
+<div class="mx-auto w-6/12">
+<dialog id="myModal" class="modal hidden">
+  <div class="modal-box w-7/12">
+    <h3 class="text-lg font-bold">Congrates!</h3>
+    <img class="mx-auto" src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+    <p class="py-4">You Have Donated Humankind</p>
+    <h3>Successfully</h3>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn mx-auto">Close confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+</div>
+ <!-- modal end -->
 
       <script src="index.js"></script>
 </body>

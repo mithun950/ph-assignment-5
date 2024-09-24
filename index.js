@@ -3,7 +3,7 @@ function getInputValueById(id) {
   if (isNaN(inputValue) || inputValue === "" || inputValue <= 0) {
     alert("Invalid Donation Amount");
   } else {
-    alert("Congratulation You Donate For Nouakhali Flood");
+    // myModal.showModal()
   }
 
   return inputValue;
@@ -13,7 +13,7 @@ function getPreviousAmount(id) {
   return parseFloat(document.getElementById(id).innerText);
     
 }
-
+  
 //noakhali donate
     const noakhaliDonateButton = document.getElementById("noakhali-donate-button");
     noakhaliDonateButton.addEventListener("click", function () {
@@ -67,96 +67,73 @@ const yourAmountValue = getPreviousAmount('your-amount')
 const newTotalBalance = yourAmountValue - parseFloat(quotaInputValue);
 document.getElementById('your-amount').innerText = newTotalBalance;
 });
-// blog button 
- 
 
-// home-btn
-const homeBtn = document.getElementById('home-btn');
+// document.getElementById('home').addEventListener('click', function(){
+//   window.location.href = 'index.html';
+// });
+
+  
+// document.getElementById('blog').addEventListener('click', function(){
+//   window.location.href = 'blog.html';
+// });
+
+//home-btn
+const homeBtn = document.getElementById("home");
 if(homeBtn){
   homeBtn.addEventListener('click', function(){
   window.location.href ='index.html';
   });
-}
-// const blogBtn = document.getElementById('blog-btn')
-//  if(blogBtn){
-//   blogBtn.addEventListener('click', function(){
-//   window.location.href ='blog-btn.html';
-// });
-//  };
+};
 
+// blog btn
+const blogBtn = document.getElementById('blog')
+ if(blogBtn){
+  blogBtn.addEventListener('click', function() {
+  window.location.href ='blog.html';
+});
+ };
 
   // history button and donate button toggle
     
   const historyTab = document.getElementById("history-tab");
     const donateTab = document.getElementById("donation-tab");
+
+    // history btn tab
     historyTab.addEventListener("click", function () {
+
     historyTab.classList.add("bg-[#B4F461]", "font-bold");
     donateTab.classList.remove("bg-[#B4F461]", "font-bold");
 
     document.getElementById("noakhali-donate-card").classList.add("hidden");
     document.getElementById("feni-donate-card").classList.add("hidden");
     document.getElementById("quota-donate-card").classList.add("hidden");
+    document.getElementById('history-section').classList.remove('hidden')
 
-  //   history section add
+   // donation btn
 
-  //   const historyItem = document.createElement('div');
-  //  historyItem.className =
-  //  "p-3 rounded-md border-2"
-
-  //  historyItem.innerHTML=`
-  //  <p>${inputValue} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-  //   <p>${new Date().toLocaleDateString()}</p>
-
-  //  `;
-  //  const historyContainer = document.getElementById('history-list')
-  //  historyContainer.insertBefore(historyItem,historyContainer.firstChild)
+  donateTab.addEventListener('click',function(){
+    donateTab.classList.add(
+      'bg-[#B4F461]'
+    )
+    historyTab.classList.remove(
+      "bg-[#B4F461]"
+    )
+    
+    document.getElementById('history-section').classList.add('hidden');
+    document.getElementById("noakhali-donate-card").classList.remove("hidden");
+    document.getElementById("feni-donate-card").classList.remove("hidden");
+    document.getElementById("quota-donate-card").classList.remove("hidden");
+  })
 });
-//  back to donation  button
-// const historyTab = document.getElementById('history-tab');
-//  const donateTab = document.getElementById('donation-tab');
-//  donateTab.addEventListener('click',function(){
 
-//     donateTab.classList.add(
 
-//                  "bg-[#B4F461]",
-//                   "font-bold"
-//               );
-//               historyTab.classList.remove(
-//                 'bg-[#B4F461]',
-//                'font-bold'
-//              );
+// history item create div
 
-//  document.getElementById('noakhali-donate-card').classList.remove('hidden')
-//  document.getElementById('feni-donate-card').classList.remove('hidden')
-//  document.getElementById('quota-donate-card').classList.remove('hidden')
+// const historyItem = document.createElement('div');
+// historyItem.innerHTML = `
+// <p></p>
 
-//  });
-// //  history section add
-//  const historyItem = document.createElement('div');
-//  historyItem.className =
-//  "p-3 rounded-md border-2"
-//  historyItem.innerHTML=`
-//  <p>${inputValue} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-//   <p>${new Date().toLocaleDateString()}</p>
 
-//  `;
-//  const historyContainer = document.getElementById('history-list')
-//  historyContainer.insertBefore(historyItem,historyContainer.firstChild)
+// `;
 
-//  toggle for donate and history
-// const historyTab= document.getElementById('history-tab');
-// const donateTab = document.getElementById('donation-tab')
-// historyTab.addEventListener('click',function(){
 
-//     historyTab.classList.add(
-
-//        'bg-[#B4F461]',
-//         'font-bold'
-//     );
-//     donateTab.classList.remove(
-//         "px-7",
-//          "bg-[#B4F461]",
-//           " font-bold "
-//       );
-
-// });
